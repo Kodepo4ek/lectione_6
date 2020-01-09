@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>lection 6</title>
+</head>
+<body>
+	<h5>Задание: 
+		<p>
+			Привет. Вам нужно написать функцию getResult. Функция принимает 1 и 2 параметров - числа, а 3 параметр - математический знак и возвращает результат. <br>Например - getResult(5,6,'+') - 11, а getResult(5,6,'*') - 30. <br>
+
+			<br>
+
+
+			В качестве приятного бонуса. Напишите функцию, которая принимает строку, а вторым аргументом - массив символов, которые нужно исключить из строки. <br>	 В результате foo('hello', ['o']) - 'hell'
+		</p>
+</h5>
+<script>
+	function getResult ( a, b, sign ) {
+		if ( sign === '+') {
+			return a + b;
+		}
+		else if (sign === '-') {
+			return a - b;
+		}
+		else if (sign === '*') {
+			return a * b;
+		}
+		else if (sign === '/') {
+			return a / b;
+		}
+		else {
+			return 'Что-то не так!';
+		}
+	}
+	console.log(getResult(5,9,'+'));
+
+
+	function foo( string,sym ) {
+		
+				return string.replace(sym,'');
+			}
+
+	console.log(foo('hello', ['o']));
+</script>
+</body>
+</html>
