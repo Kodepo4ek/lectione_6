@@ -33,15 +33,23 @@
 			return 'Что-то не так!';
 		}
 	}
-	console.log(getResult(5,9,'+'));
+	console.log(getResult(1,9,'+'));
 
 
 	function foo( string,sym ) {
-		
-				return string.replace(sym,'');
+		var result = '';
+		for (var elem of string) {
+			var i = 0;
+			i--;
+			if ( elem == sym) {
+				result = string.slice(0,i);
+			}
+		}
+		return result;
+				//return string.replace(sym,'');
 			}
 
-	console.log(foo('hello', ['o']));
+	console.log(foo('hello', 'o'));
 </script>
 </body>
 </html>
